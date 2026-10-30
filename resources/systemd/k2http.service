@@ -1,0 +1,12 @@
+[Unit]
+Description=k2http daemon
+
+[Service]
+User=k2http
+Group=k2http
+RuntimeDirectory=k2http
+ExecStart=/usr/bin/kafka2x /etc/k2http/config.json
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
