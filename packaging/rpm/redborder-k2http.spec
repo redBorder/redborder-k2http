@@ -9,8 +9,6 @@ URL: https://github.com/redBorder/redborder-k2http
 Source0: %{name}-%{version}.tar.gz
 
 Requires: kafka2x
-# the old k2http package ships the same unit file
-Obsoletes: k2http
 
 %description
 %{summary}
