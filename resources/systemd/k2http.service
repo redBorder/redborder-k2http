@@ -8,5 +8,20 @@ RuntimeDirectory=k2http
 ExecStart=/usr/bin/kafka2x /etc/k2http/config.json
 Restart=always
 
+# Hardening / Sandboxing Measures
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectControlGroups=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+CapabilityBoundingSet=
+SystemCallFilter=@system-service
+
 [Install]
 WantedBy=multi-user.target
